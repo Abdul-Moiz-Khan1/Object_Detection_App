@@ -13,12 +13,14 @@ import android.graphics.SurfaceTexture
 import android.hardware.camera2.CameraCaptureSession
 import android.hardware.camera2.CameraDevice
 import android.hardware.camera2.CameraManager
+import android.os.Build
 import android.os.Bundle
 import android.os.FileUtils
 import android.os.Handler
 import android.os.HandlerThread
 import android.view.Surface
 import android.view.TextureView
+import android.view.WindowManager
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -59,6 +61,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = Color.TRANSPARENT
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        }
 
         paint = Paint()
         labels = FileUtil.loadLabels(this, "label.txt")
