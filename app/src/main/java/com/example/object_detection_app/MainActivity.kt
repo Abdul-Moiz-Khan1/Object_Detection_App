@@ -100,8 +100,6 @@ class MainActivity : AppCompatActivity() {
                 var image = TensorImage.fromBitmap(bitmap)
                 image = imageProcessor.process(image)
 
-
-// Runs model inference and gets result.
                 val outputs = model.process(image)
                 val locations = outputs.locationsAsTensorBuffer.floatArray
                 val classes = outputs.classesAsTensorBuffer.floatArray
