@@ -51,6 +51,15 @@ Performance
     a. The app runs entirely on-device (no internet required).
     b. Efficient real-time performance even on mid-range devices
 
+## Screenshots
+
+<img width="250" height="500" alt="objectDetection1" src="https://github.com/user-attachments/assets/5c82b012-a2f2-4cb5-a731-15878c60eb45" />
+
+<img width="250" height="500" alt="objectDetection2" src="https://github.com/user-attachments/assets/7a25c158-883e-40df-8f1a-f7eb95b7cc88" />
+
+
+    
+
 
 
 
